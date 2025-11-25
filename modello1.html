@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+i<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -49,20 +49,24 @@
         <a href="index.html" class="back-link">
             <span class="material-symbols-outlined">arrow_back</span> Home
         </a>
-        <h1>Reperto 01: Pinnacolo</h1>
+        <h1>Reperto 01: Sentiero</h1>
         <button class="theme-btn" id="toggleTheme"><span class="material-symbols-outlined">contrast</span></button>
     </header>
 
     <div class="viewer-container">
         <!-- CAMBIARE IL FILE GLB QUI SOTTO PER OGNI PAGINA -->
-        <model-viewer 
-            src="1.glb" 
-            alt="Modello 3D" 
-            auto-rotate 
-            camera-controls 
-            shadow-intensity="1" 
-            exposure="1">
-        </model-viewer>
+        <model-viewer src="1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+
     </div>
 
     <script>
